@@ -1,9 +1,12 @@
 :root{
-    --background:#FAF8F4;
-    --card:#FFFFFF;
-    --text:#2E2E2E;
-    --sage:#A9B8A5;
-    --gold:#C8A96A;
+    --bg:#f8f6f2;
+    --card:#ffffff;
+    --text:#2f352f;
+    --muted:#6f766d;
+    --accent:#b89c64;
+    --sage:#dce6de;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+    --radius:22px;
 }
 
 *{
@@ -12,62 +15,204 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    background:var(--background);
+    background:var(--bg);
     color:var(--text);
-    font-family:Inter,Arial,sans-serif;
+    font-family:Inter,sans-serif;
     line-height:1.6;
 }
 
 .container{
-    width:min(1200px,90%);
+    width:min(1180px,92%);
     margin:auto;
 }
 
-header{
-    padding:30px 0;
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:999;
+    backdrop-filter:blur(16px);
+    background:rgba(255,255,255,.75);
+    border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+.nav-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
 }
 
 .logo{
-    font-size:32px;
+    font-size:1.4rem;
     font-weight:700;
+    font-family:"Cormorant Garamond",serif;
+}
+
+.navbar ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
 }
 
 .hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:90px 0;
+    position:relative;
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1800&auto=format&fit=crop") center/cover;
 }
 
-.hero h1{
-    font-size:64px;
+.overlay{
+    position:absolute;
+    inset:0;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:white;
+}
+
+.eyebrow{
+    letter-spacing:3px;
+    text-transform:uppercase;
     margin-bottom:20px;
 }
 
-.hero p{
-    font-size:20px;
-    color:#666;
+.hero h1{
+    font-family:"Cormorant Garamond",serif;
+    font-size:5rem;
+    font-weight:700;
+}
+
+.hero span{
+    color:#f4d28d;
+}
+
+.subtitle{
+    max-width:650px;
+    margin:25px auto;
+    font-size:1.1rem;
 }
 
 .button{
     display:inline-block;
-    margin-top:35px;
-    background:#C8A96A;
+    margin-top:15px;
+    padding:16px 34px;
+    background:var(--accent);
     color:white;
     text-decoration:none;
-    padding:16px 36px;
-    border-radius:40px;
+    border-radius:999px;
+    transition:.3s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:90px 0;
+}
+
+h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:2.8rem;
+    margin-bottom:40px;
 }
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin:70px 0;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:28px;
 }
 
 .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    padding:30px;
+    box-shadow:var(--shadow);
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.big-number{
+    font-size:2rem;
+    font-weight:700;
+    color:var(--accent);
+    margin:15px 0;
+}
+
+.budget-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.budget-box div{
     background:white;
     padding:30px;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.06);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.budget-box span{
+    display:block;
+    margin-top:15px;
+    font-size:2rem;
+    color:var(--accent);
+    font-weight:700;
+}
+
+.timeline{
+    display:grid;
+    gap:18px;
+}
+
+.timeline div{
+    background:white;
+    padding:22px;
+    border-left:6px solid var(--accent);
+    border-radius:16px;
+    box-shadow:var(--shadow);
+}
+
+footer{
+    text-align:center;
+    padding:50px;
+    color:var(--muted);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.navbar ul{
+display:none;
+}
+
+h2{
+font-size:2rem;
+}
+
 }
