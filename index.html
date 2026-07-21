@@ -4,112 +4,233 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Sneha & Avinaash | WeddingHQ</title>
 
-    <title>WeddingHQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
 
-<header class="container">
+<nav class="navbar">
 
-    <div class="logo">
-        🌿 WeddingHQ
+    <div class="container nav-wrapper">
+
+        <div class="logo">
+            🌿 WeddingHQ
+        </div>
+
+        <ul>
+
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#venues">Venues</a></li>
+            <li><a href="#budget">Budget</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+<header class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            10 December 2026
+        </p>
+
+        <h1>
+            Sneha <span>&</span> Avinaash
+        </h1>
+
+        <p class="subtitle">
+            Designing an intimate destination wedding with timeless elegance.
+        </p>
+
+        <a href="#dashboard" class="button">
+            View Wedding Dashboard
+        </a>
+
     </div>
 
 </header>
 
-<section class="hero container">
+<section id="dashboard" class="container">
 
-    <h1>
-        Sneha & Avinaash
-    </h1>
+    <h2>Wedding Overview</h2>
 
-    <p>
-        Planning our dream wedding • 10 December 2026
-    </p>
+    <div class="cards">
 
-    <a href="#dashboard"
-       class="button">
-        Enter Dashboard
-    </a>
+        <div class="card">
+
+            <h3>⏳ Countdown</h3>
+
+            <div id="countdown" class="big-number">
+                Loading...
+            </div>
+
+            <p>until the big day</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>💰 Budget</h3>
+
+            <div class="big-number">
+                ₹8,00,000
+            </div>
+
+            <p>Target Wedding Budget</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>👥 Guests</h3>
+
+            <div class="big-number">
+                100
+            </div>
+
+            <p>Expected Invitations</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>📈 Progress</h3>
+
+            <div class="big-number">
+                18%
+            </div>
+
+            <p>Planning Complete</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="venues" class="container">
+
+    <h2>Venue Leaderboard</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🥇 Dune Eco Village</h3>
+
+            <p>
+                Best overall value with accommodation included.
+            </p>
+
+            <strong>★★★★★</strong>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🥈 Taj Coromandel</h3>
+
+            <p>
+                Premium luxury option if budget allows.
+            </p>
+
+            <strong>★★★★★</strong>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🥉 Waterscapes</h3>
+
+            <p>
+                Beautiful Kerala destination with excellent ambience.
+            </p>
+
+            <strong>★★★★☆</strong>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section
-id="dashboard"
-class="container">
+<section id="budget" class="container">
 
-<div class="cards">
+    <h2>Budget Snapshot</h2>
 
-<div class="card">
+    <div class="budget-box">
 
-<h3>
-⏳ Countdown
-</h3>
+        <div>
 
-<span>
-507 Days
-</span>
+            <h3>Total Budget</h3>
 
-</div>
+            <span>₹8,00,000</span>
 
-<div class="card">
+        </div>
 
-<h3>
-💰 Budget
-</h3>
+        <div>
 
-<span>
-₹8L
-</span>
+            <h3>Estimated Spend</h3>
 
-</div>
+            <span>₹0</span>
 
-<div class="card">
+        </div>
 
-<h3>
-🏨 Venues
-</h3>
+        <div>
 
-<span>
-11
-</span>
+            <h3>Remaining</h3>
 
-</div>
+            <span>₹8,00,000</span>
 
-<div class="card">
+        </div>
 
-<h3>
-👥 Guests
-</h3>
-
-<span>
-100
-</span>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
+<section id="timeline" class="container">
+
+    <h2>Planning Timeline</h2>
+
+    <div class="timeline">
+
+        <div>✅ Venue Research</div>
+
+        <div>⬜ Finalise Venue</div>
+
+        <div>⬜ Book Photographer</div>
+
+        <div>⬜ Invitations</div>
+
+        <div>⬜ Wedding Week</div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    Built with ❤️ for Sneha & Avinaash
+
+</footer>
+
+<script src="assets/js/app.js"></script>
 
 </body>
-
 </html>
